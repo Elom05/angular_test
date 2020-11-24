@@ -1,0 +1,74 @@
+
+/* AUTOMATED REAL TIME FIXING SECTION */
+p {
+  text-align:center
+}
+
+#userInput{
+  text-align: center;
+}
+
+/* SWITCH SECTION */
+#baseFlagSection, #switchArrowSection, #quotedFlagSection{
+  display:flex;
+  justify-content:center;
+  align-items:center
+}
+
+#realTimeRate{
+  width: 10em;
+  text-align: center;
+  margin:auto;
+}
+
+#switchButton:hover{
+  background-color: lightblue;
+  border-radius: 15px;
+}
+
+/* MANUAL FIXING INPUT SECTION */
+#manualOverride{
+  width: 10em;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+/* AMOUNT TO CONVERT AND CONVERTED AMOUNT SECTION */
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+#baseCcy, #convertedAmt{
+  text-align: center;
+}
+
+/* CONVERT BUTTON SECTION */
+#convertBtn{
+  padding: 14px 80px;
+  font-size: 20px;
+  transition-duration: 0.05s;
+  border-radius: 50px;
+  border: 0;
+  box-shadow: 0px 5px 10px rgba(darken(dodgerblue, 40%));
+  border-bottom: 4px solid lighten(gray, 70%);
+}
+
+#convertBtn:hover {
+  background-color: grey;
+  color:white;
+  border: none;
+}
+
+#convertBtn:active {
+  background-color: green;
+  color: green;
+  border: none;
+}
+
+/* HISTORICAL FIXINGS SECTION */
+table, th{
+  text-align: center;
+}

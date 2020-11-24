@@ -1,0 +1,79 @@
+<div class="jumbotron container" id="userInput">
+
+  <!-- AUTOMATED REAL TIME FIXING SECTION-->
+  <div class="realTimeFixing">
+    <label>Real-time EUR/USD rate:</label>
+    <input class="form-control" id="realTimeRate" type="text" [value]=newFixing readonly #currRate />
+  </div>
+
+  <!-- SWITCH SECTION-->
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-2" id="baseFlagSection">
+      <img class="img-responsive" [src]="baseCcy" alt="Base Ccy" width="100" height="100">
+    </div>
+    <div class="col-sm-2" id="switchArrowSection">
+      <a href="#" (click)="switchCcy(amountConv)">
+        <img class="img-responsive" id="switchButton" [src]="exchg" alt="Switch" width="60" height="60">
+      </a>
+    </div>
+    <div class="col-sm-2" id="quotedFlagSection">
+      <img class="img-responsive" [src]="quotedCcy" alt="Quoted Ccy" width="100" height="100">
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+
+  <!-- MANUAL FIXING INPUT SECTION-->
+  <div class="rateManualInput">
+    <label>Manual Override:</label>
+    <input class="form-control" id="manualOverride" type="number" min="0" placeholder="Your rate" [(value)]="manualOverride" #inputManualOverride/>
+  </div>
+
+  <!-- AMOUNT TO CONVERT AND CONVERTED AMOUNT SECTION-->
+  <div class="row" id="userInputSection">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-3">
+      <div class="wrapper">
+        <img class="img-responsive" id="baseSign" [src]="baseCcySign" alt="Base Ccy" width="30" height="30">
+        <input class="form-control" id="baseCcy" type="number" min="0" placeholder="Your amount to convert" [(value)]=inputAmt #inputBaseCurrency />
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="wrapper">
+        <img class="img-responsive" id="quotedSign" [src]="quotedCcySign" alt="Base Ccy" width="30" height="30">
+        <input class="form-control" id="convertedAmt" type="text" [value]=convertedAmt readonly #amountConv />
+      </div>
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+  <br>
+
+  <!-- CONVERT BUTTON SECTION-->
+  <div class="container">
+    <button class="btn btn-success" id="convertBtn" (click)="getParameters(currRate, inputManualOverride, inputBaseCurrency)">CONVERT</button>
+  </div>
+</div>
+
+<!-- HISTORICAL FIXINGS SECTION-->
+<div class="container">
+  <table class="table table-hover table-condensed" id="histoTable">
+    <thead>
+      <tr>
+        <th *ngFor="let header of headers">
+          {{ header }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fixing of histo">
+        <td>{{ fixing.timestamp }}</td>
+        <td>{{ fixing.realtimeFx }}</td>
+        <td>{{ fixing.overrideFx }}</td>
+        <td>{{ fixing.initalAmt }}</td>
+        <td>{{ fixing.initialCcy }}</td>
+        <td>{{ fixing.convAmt }}</td>
+        <td>{{ fixing.convCcy }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

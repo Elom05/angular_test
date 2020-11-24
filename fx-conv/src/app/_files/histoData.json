@@ -1,0 +1,47 @@
+[
+  {
+    "timestamp": "19/11/2020 - 18:15",
+    "realtimeFx": 1.7,
+    "overrideFx": "",
+    "initalAmt": 25000,
+    "initialCcy": "EUR",
+    "convAmt": 23500,
+    "convCcy": "USD"
+  },
+  {
+    "timestamp": "19/11/2020 - 16:43",
+    "realtimeFx": "",
+    "overrideFx": 1.1,
+    "initalAmt": 100000,
+    "initialCcy": "EUR",
+    "convAmt": 99000,
+    "convCcy": "USD"
+  },
+  {
+    "timestamp": "19/11/2020 - 13:28",
+    "realtimeFx": 1.3966,
+    "overrideFx": "",
+    "initalAmt": 8379.88,
+    "initialCcy": "EUR",
+    "convAmt": 11445.24,
+    "convCcy": "USD"
+  },
+  {
+  "timestamp": "19/11/2020 - 10:05",
+  "realtimeFx": "",
+  "overrideFx": 1.204,
+  "initalAmt": 50000,
+  "initialCcy": "EUR",
+  "convAmt": 62700,
+  "convCcy": "USD"
+  },
+  {
+    "timestamp": "19/11/2020 - 08:41",
+    "realtimeFx": 1.346,
+    "overrideFx": "",
+    "initalAmt": 23567.98,
+    "initialCcy": "USD",
+    "convAmt": "20000",
+    "convCcy": "EUR"
+  }
+]
